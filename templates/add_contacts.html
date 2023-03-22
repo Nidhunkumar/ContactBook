@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<center> <h4 class="mt-5">Add contact</h4>
+  <form  method="POST">
+    {% csrf_token %}
+    {{ contact_form|crispy }}
+    <button class="btn btn-primary mb-2" type="submit">ADD</button>
+    
+  </form>
+
+
+{% endblock content %}

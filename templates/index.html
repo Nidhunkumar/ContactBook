@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+
+
+
+   
+
+
+
+
+
+
+
+  
+
+
+
+  <div class="header-text">
+    <h6>Welcome To CONTACTS CORNER</h6>
+    <h4><em>SAVE</em> CONTACTS HERE</h4>
+    <div class="main-button">
+      {% if user.is_authenticated %}
+      <a href="{% url "add-contact"  %}">ADD</a>
+      <a  href="{% url "all-contacts" %}">VIEW</a>
+
+      {% else %}
+      <a href="{% url "user-registration"  %}">REGISTER</a>
+    
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock content %}

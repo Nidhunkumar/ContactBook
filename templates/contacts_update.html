@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+            <center> 
+            <h5 class="font-weight-light">Update</h5></center> 
+            <form  method="POST">
+              {% csrf_token %}
+              {{ contacts|crispy }}
+              <button class="btn btn-primary " type="submit">Update</button>
+              
+            </form>
+              
+              
+             
+            
+          
+{% endblock content %}
